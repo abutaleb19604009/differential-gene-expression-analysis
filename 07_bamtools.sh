@@ -6,11 +6,11 @@ myDir=$(pwd)
 
 for sampleID in "${sampleIDs[@]}"
 do
+
         mkdir -p ${myDir}/../output/${sampleID}/bamtools/
 
         ## run bamtools 
 
         bamtools stats -in ${myDir}/../output/${sampleID}/markduplicates/${sampleID}.markdup.bam > ${myDir}/../output/${sampleID}/bamtools/${sampleID}.markdup.dupstats.txt
-
 done
 
